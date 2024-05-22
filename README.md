@@ -64,7 +64,7 @@ npm start
 - ReactJS
 - React-Icons
 
-  ##Screen Shot
+## Screen Shot
 ![Screenshot (206)](https://github.com/raobaba/Zevi_Assignment/assets/99542983/17c6fc76-4498-4a5c-aac9-485ac0cf56ab)
 [Screenshot (206)](https://github.com/raobaba/Zevi_Assignment/assets/99542983/e0a681c5-478a-42f6-a981-b90d34f000a3)
 ![Screenshot (208)](https://github.com/raobaba/Zevi_Assignment/assets/99542983/9b494f21-a2da-484f-9abe-434ba0a41000)
