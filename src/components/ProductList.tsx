@@ -2,17 +2,8 @@ import React, { useState } from "react";
 import "../styles/ProductList.scss";
 import { FaStar, FaHeart } from "react-icons/fa";
 
-interface Product {
-  image: string;
-  name: string;
-  price: number;
-  discountPrice: number;
-  ratings: number;
-  review: number;
-}
-
 interface ProductListProps {
-  searchResults: Product[];
+  searchResults: any[];
 }
 
 function generateStarIcons(rating: number) {
@@ -23,7 +14,7 @@ function generateStarIcons(rating: number) {
   return stars;
 }
 
-const ProductList: React.FC<ProductListProps> = ({ searchResults }) => {
+function ProductList({ searchResults }: ProductListProps) {
   const [likedItems, setLikedItems] = useState<number[]>([]);
 
   const toggleLike = (index: number) => {
@@ -48,19 +39,19 @@ const ProductList: React.FC<ProductListProps> = ({ searchResults }) => {
             <p>{item.name}</p>
             <span>
               <p style={{ textDecoration: "line-through" }}>
-                Rs. {item.price.toFixed(0)}
+                Rs. {Number(item.price).toFixed(0)}
               </p>
               <p style={{ marginLeft: "10px" }}>
-                Rs. {item.discountPrice.toFixed(0)}
+                Rs. {Number(item.discountPrice).toFixed(0)}
               </p>
             </span>
             <span>
               <p style={{ display: "flex" }}>
                 <span style={{ color: "red" }}>
                   {generateStarIcons(item.ratings)}
-                </span>
+                </span>{" "}
                 <span style={{ marginTop: "8px" }}>
-                  ({item.review.toFixed(0)})
+                  ({Number(item.review).toFixed(0)})
                 </span>
               </p>
             </span>
