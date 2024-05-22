@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import Search from "./Search";
+import TrendingProducts from "./TrendingProducts";
 import "../styles/Home.scss";
 import { generateFakeFashionItems } from "../utils/FakeDataGenerator";
-
 const Home: React.FC = () => {
   const [clicked, setClicked] = useState(false);
   const [userTyping, setUserTyping] = useState(false);
@@ -49,7 +49,9 @@ const Home: React.FC = () => {
         />
       </div>
       <div className="trending-container">
-        
+      <div className="trending-container">
+        {!userTyping && <TrendingProducts clicked={clicked} />}
+      </div>
       </div>
       <div className={userTyping ? 'filter-list' : ''}>
         {userTyping ? (
