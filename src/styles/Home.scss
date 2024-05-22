@@ -1,0 +1,62 @@
+.home-container {
+  background-image: url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNsb3RocyUyMG9uJTIwaGFuZ2VyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+
+  .search-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px; 
+    padding: 50px; 
+    border-radius: 5px;
+    
+    .trending-container {
+      margin-right: 140px;
+    }
+  }
+
+  .zevi-logo {
+    position: absolute;
+    top: 10px;
+    right: -300px;
+    font-weight: bold;
+    color: #36454f;
+    font-family: "Concert One", cursive;
+
+    @media (max-width: 1068px) {
+      right: -200px;
+      font-size: 24px;
+    }
+    @media (max-width: 868px) {
+      right: -100px;
+      font-size: 24px;
+    }
+    @media (max-width: 568px) {
+      right: 40%;
+      font-size: 24px;
+    }
+  }
+
+  .filter-list {
+    width: 90%;
+    height: 500px;
+    margin-top: 100px;
+    background-color: #fff;
+    
+    .list-filter {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
