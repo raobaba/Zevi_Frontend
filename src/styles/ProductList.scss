@@ -1,0 +1,97 @@
+.product-list-box {
+    width: 80%;
+    height: 500px;
+    background-color: #fff;
+    overflow-y: scroll;
+    font-family: sans-serif;
+    color: black;
+  
+    h2 {
+      color: black;
+      font-family: sans-serif;
+    }
+  
+    .product-box {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 1px;
+      @media (max-width:1200px){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 1px;
+      }
+      @media (max-width:930px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 1px;
+      }
+      @media (max-width:630px){
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 1px;
+      }
+      
+    }
+  
+    span {
+      display: flex;
+      justify-content: center;
+      font-family: sans-serif;
+      font-size: 14px;
+    }
+  
+    .product-item {
+      line-height: 1px;
+      position: relative;
+  
+      img {
+        width: 190px;
+        height: 230px;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover + .view-product-button,
+        .view-product-button:hover {
+          display: block;
+        }
+      }
+      .view-product-button {
+        display: none;
+        position: absolute;
+        bottom: 105px;
+        width: calc(90% - 41px);
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 12px;
+        cursor: pointer;
+        margin-left: 19px;
+        border-radius: 0 0 5px 5px;
+        transition: display 5s ease-in-out;
+      }
+  
+      .like-icon {
+        position: absolute;
+        top: 10px; 
+        right: 10px;
+        cursor: pointer;
+        background-color: transparent;
+        padding: 10px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+  
+        svg {
+          font-size: 1.5rem;
+          color: gray; // Default color
+        }
+      }
+    }
+  }
